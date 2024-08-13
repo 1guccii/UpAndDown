@@ -1,4 +1,4 @@
-package com.j4kerstudio.upanddown.ui.theme
+package com.j4kerstudio.upanddown.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
