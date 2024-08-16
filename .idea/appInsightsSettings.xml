@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.j4kerstudio.upanddown" />
+                  <option name="mobileSdkAppId" value="1:600132174553:android:488e7f300e45678daff4c8" />
+                  <option name="projectId" value="up-and-share-3c147" />
+                  <option name="projectNumber" value="600132174553" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

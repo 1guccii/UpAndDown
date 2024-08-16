@@ -15,7 +15,7 @@ val roboto = FontFamily(
     Font(R.font.roboto_bold, FontWeight.Bold)
 )
 
-val Typography = Typography(
+var Typography = Typography(
     displayLarge = TextStyle(
         fontFamily = roboto,
         color = Color(0xFF9290C3),
@@ -55,7 +55,8 @@ val Typography = Typography(
         fontSize = 28.sp,
         lineHeight = 36.sp,
         letterSpacing = 0.sp
-    ),
+    )
+    ,
     headlineSmall = TextStyle(
         fontFamily = roboto,
         color = Color(0xFF9290C3),
@@ -67,8 +68,8 @@ val Typography = Typography(
     titleLarge = TextStyle(
         fontFamily = roboto,
         color = Color(0xFF9290C3),
-        fontWeight = FontWeight.Bold,
-        fontSize = 22.sp,
+        fontWeight = FontWeight.Normal,
+        fontSize = 20.sp,
         lineHeight = 28.sp,
         letterSpacing = 0.15.sp
     ),
@@ -107,7 +108,7 @@ val Typography = Typography(
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp,
         lineHeight = 16.sp,
-        letterSpacing = 0.4.sp
+        letterSpacing = 0.4.sp,
     ),
     labelLarge = TextStyle(
         fontFamily = roboto,

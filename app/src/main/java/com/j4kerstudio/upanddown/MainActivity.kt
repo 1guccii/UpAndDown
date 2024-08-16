@@ -1,18 +1,10 @@
 package com.j4kerstudio.upanddown
 
+import UpAndDownApp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.j4kerstudio.upanddown.presentation.ui.screen.LoginScreen
-import com.j4kerstudio.upanddown.presentation.ui.screen.SplashScreen
 import com.j4kerstudio.upanddown.presentation.ui.theme.UpAndDownTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             UpAndDownTheme {
-                LoginScreen()
+                UpAndDownApp()
             }
         }
     }

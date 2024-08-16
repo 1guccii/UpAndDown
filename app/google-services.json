@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "600132174553",
+    "project_id": "up-and-share-3c147",
+    "storage_bucket": "up-and-share-3c147.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600132174553:android:488e7f300e45678daff4c8",
+        "android_client_info": {
+          "package_name": "com.j4kerstudio.upanddown"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB_jfMLGPZ410o11PHQ_qlS2Vnn3j0hPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
