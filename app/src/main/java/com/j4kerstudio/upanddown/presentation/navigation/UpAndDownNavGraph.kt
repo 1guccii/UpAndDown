@@ -1,27 +1,29 @@
 package com.j4kerstudio.upanddown.presentation.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
-import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
+import com.google.android.gms.auth.api.Auth
+import com.google.firebase.auth.FirebaseAuth
 import com.j4kerstudio.upanddown.presentation.ui.screen.HomeScreen
 import com.j4kerstudio.upanddown.presentation.ui.screen.LoginScreen
 import com.j4kerstudio.upanddown.presentation.ui.screen.SplashScreen
+import com.j4kerstudio.upanddown.until.GoogleSignInHelper
 
 enum class Screen {
     HOME,
     SPLASH,
     LOGIN,
 }
+val auth = FirebaseAuth.getInstance()
+val isLoggedIn = auth.currentUser != null
 
 @Composable
-fun UpAndDownNavHost(navController: NavHostController) {
+fun UpAndDownNavHost(navController: NavHostController, googleSignInHelper: GoogleSignInHelper) {
     NavHost(navController = navController, startDestination = Screen.SPLASH.name) {
         composable(Screen.LOGIN.name) {
-            LoginScreen(navController)
+            LoginScreen(navController = navController, googleSignInHelper = googleSignInHelper)
         }
         composable(Screen.SPLASH.name) {
             SplashScreen(navController)

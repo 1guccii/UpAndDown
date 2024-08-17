@@ -45,7 +45,6 @@ fun DownloadSpace(process: Float) {
             Text(text = "14MB out of 20MB used", style = Typography.bodySmall)
         }
     }
-
 }
 @Preview(showBackground = true)
 @Composable

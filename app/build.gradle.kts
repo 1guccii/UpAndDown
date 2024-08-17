@@ -51,9 +51,11 @@ android {
 }
 
 dependencies {
+    implementation ("com.google.android.gms:play-services-auth:21.2.0")
     implementation(libs.firebase.storage)
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
     implementation(libs.firebase.auth)
+
     val navVersion = "2.7.7"
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")

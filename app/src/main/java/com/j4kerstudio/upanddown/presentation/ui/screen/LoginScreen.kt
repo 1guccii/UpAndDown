@@ -1,5 +1,6 @@
 package com.j4kerstudio.upanddown.presentation.ui.screen
 
+import android.app.Activity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -12,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
@@ -19,9 +21,10 @@ import androidx.navigation.compose.rememberNavController
 import com.j4kerstudio.upanddown.R
 import com.j4kerstudio.upanddown.presentation.ui.component.GoogleLoginButton
 import com.j4kerstudio.upanddown.presentation.ui.theme.Typography
+import com.j4kerstudio.upanddown.until.GoogleSignInHelper
 
 @Composable
-fun LoginScreen(navController: NavController) {
+fun LoginScreen(navController: NavController, googleSignInHelper: GoogleSignInHelper) {
     Column(
         modifier = Modifier
             .fillMaxSize(1f)
@@ -46,7 +49,7 @@ fun LoginScreen(navController: NavController) {
             modifier = Modifier.weight(1f),
             verticalArrangement = Arrangement.Center
         ) {
-            GoogleLoginButton(onClick = {})
+            GoogleLoginButton(onClick = { googleSignInHelper.signIn() })
         }
         Spacer(modifier = Modifier.weight(1/2f))
     }
@@ -55,5 +58,5 @@ fun LoginScreen(navController: NavController) {
 @Preview
 @Composable
 fun LoginScreenPreview() {
-    LoginScreen(rememberNavController())
+    LoginScreen(rememberNavController(), googleSignInHelper = GoogleSignInHelper(LocalContext.current,Activity()))
 }
