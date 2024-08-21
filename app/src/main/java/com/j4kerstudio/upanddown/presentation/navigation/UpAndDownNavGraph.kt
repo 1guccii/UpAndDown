@@ -16,8 +16,6 @@ enum class Screen {
     SPLASH,
     LOGIN,
 }
-val auth = FirebaseAuth.getInstance()
-val isLoggedIn = auth.currentUser != null
 
 @Composable
 fun UpAndDownNavHost(navController: NavHostController, googleSignInHelper: GoogleSignInHelper) {
