@@ -23,9 +23,6 @@ fun UpAndDownNavHost(navController: NavHostController, googleSignInHelper: Googl
         composable(Screen.LOGIN.name) {
             LoginScreen(navController = navController, googleSignInHelper = googleSignInHelper)
         }
-        composable(Screen.SPLASH.name) {
-            SplashScreen(navController)
-        }
         composable(Screen.HOME.name) {
             HomeScreen(navController)
         }
