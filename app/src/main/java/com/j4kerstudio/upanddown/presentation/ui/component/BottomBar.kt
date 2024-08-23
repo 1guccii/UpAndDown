@@ -7,6 +7,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -17,12 +21,15 @@ import com.j4kerstudio.upanddown.R
 
 @Composable
 fun BottomBar() {
+    var selectedIndex by remember { mutableStateOf(0) }
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Absolute.SpaceAround,
         modifier = Modifier.fillMaxWidth(1f).height(70.dp)
     ) {
-        IconButton(onClick = { /*TODO*/ }) {
+        IconButton(
+            onClick = { selectedIndex = 0 }
+        ) {
             Icon(imageVector = ImageVector.vectorResource(id = R.drawable.home), contentDescription = "home")
         }
         IconButton(onClick = { /*TODO*/ }) {
