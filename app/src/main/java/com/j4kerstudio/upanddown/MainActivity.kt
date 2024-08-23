@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.j4kerstudio.upanddown.presentation.ui.component.BottomBar
+import com.j4kerstudio.upanddown.presentation.ui.screen.HomeScreen
 import com.j4kerstudio.upanddown.presentation.ui.theme.UpAndDownTheme
 import com.j4kerstudio.upanddown.until.GoogleSignInHelper
 
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.Center,
                     modifier = Modifier.fillMaxSize(1f)
                 ) {
-                    BottomBar()
+                    HomeScreen(navController = rememberNavController())
                 }
             }
         }
