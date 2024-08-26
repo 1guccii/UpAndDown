@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.Center,
                     modifier = Modifier.fillMaxSize(1f)
                 ) {
-                    HomeScreen(navController = rememberNavController())
+                    UpAndDownApp(googleSignInHelper = googleSignInHelper)
                 }
             }
         }

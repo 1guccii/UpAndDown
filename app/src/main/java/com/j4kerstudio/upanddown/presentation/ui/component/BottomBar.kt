@@ -18,19 +18,27 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.j4kerstudio.upanddown.R
+import com.j4kerstudio.upanddown.presentation.navigation.Screen
 import com.j4kerstudio.upanddown.presentation.ui.theme.PrimeColor
 
 @Composable
-fun BottomBar() {
+fun BottomBar(navController: NavController) {
     var selectedIndex by remember { mutableStateOf(-1) }
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Absolute.SpaceAround,
-        modifier = Modifier.fillMaxWidth(1f).height(70.dp)
+        modifier = Modifier
+            .fillMaxWidth(1f)
+            .height(70.dp)
     ) {
         IconButton(
-            onClick = { selectedIndex = 0 }
+            onClick = {
+                selectedIndex = 0
+                navController.navigate(Screen.HOME.name)
+            }
         ) {
             Icon(
                 imageVector = ImageVector.vectorResource(id = R.drawable.home),
@@ -69,5 +77,5 @@ fun BottomBar() {
 @Preview(showBackground = true)
 @Composable
 fun BottomBarPreview() {
-    BottomBar()
+    BottomBar(navController = rememberNavController())
 }
