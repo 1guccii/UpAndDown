@@ -19,7 +19,7 @@ enum class Screen {
 
 @Composable
 fun UpAndDownNavHost(navController: NavHostController, googleSignInHelper: GoogleSignInHelper) {
-    NavHost(navController = navController, startDestination = Screen.SPLASH.name) {
+    NavHost(navController = navController, startDestination = Screen.HOME.name) {
         composable(Screen.LOGIN.name) {
             LoginScreen(navController = navController, googleSignInHelper = googleSignInHelper)
         }

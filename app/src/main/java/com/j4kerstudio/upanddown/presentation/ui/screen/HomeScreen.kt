@@ -11,6 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.j4kerstudio.upanddown.R
+import com.j4kerstudio.upanddown.presentation.ui.component.BottomBar
 import com.j4kerstudio.upanddown.presentation.ui.component.BoxProgress
 import com.j4kerstudio.upanddown.presentation.ui.component.CircleProgress
 
@@ -22,8 +23,10 @@ fun HomeScreen(navController: NavController) {
         modifier = Modifier.fillMaxSize(1f)
     ) {
         BoxProgress()
+        BottomBar(navController = navController)
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable
